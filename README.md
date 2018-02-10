@@ -19,7 +19,7 @@ Get Latest Data from https://finance.yahoo.com/quote/BTC-USD/history?p=BTC-USD
   * pandas
   * numpy
   
-## Visualising The Data
+## Visualising Data
 ```python
 #Importing libraries
 
@@ -53,7 +53,7 @@ ex.columns=(['today','tomorrow'])
 xtrain = np.reshape(xtrain, (2694, 1, 1))     #Reshaping into required shape for Keras
 
 ```
-## Building the RNN
+## Building the Recurrent Neraul Network
 
 ```python
 #importing keras and its packages
@@ -73,7 +73,7 @@ regressor.compile(optimizer='adam',loss='mean_squared_error')               #com
 
 regressor.fit(xtrain,ytrain,batch_size=32,epochs=2000)                      #fitting the RNN to the training set  
 ```
-## Making Predictions 
+## Predictions 
 
 ```python
 # Reading CSV file into test set
@@ -102,13 +102,6 @@ plt.xlabel('Days')
 plt.ylabel('BTC Value')
 plt.legend()
 plt.show()
-```
-
-
-
-You can surely increase the accuracy up to a limit by increasing the epochs. 
-```python 
-regressor.fit(xtrain,ytrain,batch_size=32,epochs=2000)                      #fitting the RNN to the training set 
 ```
 
 ## Reference- 
