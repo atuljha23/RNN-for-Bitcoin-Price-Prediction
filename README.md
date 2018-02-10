@@ -77,7 +77,7 @@ regressor.fit(xtrain,ytrain,batch_size=32,epochs=2000)                      #fit
 
 ```python
 # Reading CSV file into test set
-test_set = pd.read_csv('BTC-USD.csv')
+test_set = pd.read_csv('BTCtest.csv')
 test_set.head()
 
 
