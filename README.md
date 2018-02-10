@@ -77,7 +77,7 @@ regressor.fit(xtrain,ytrain,batch_size=32,epochs=2000)                      #fit
 
 ```python
 # Reading CSV file into test set
-test_set = pd.read_csv('BTCtest.csv')
+test_set = pd.read_csv('BTC-USD.csv')
 test_set.head()
 
 
@@ -95,8 +95,8 @@ predicted_stock_price = sc.inverse_transform(predicted_stock_price)
 ## Visualising the result 
 ```python
 
-plt.plot(real_stock_price, color = 'red', label = 'Real BTC Value')
-plt.plot(predicted_stock_price, color = 'blue', label = 'Predicted BTC Value')
+plt.plot(real_stock_price, color = 'green', label = 'Current BTC Value')
+plt.plot(predicted_stock_price, color = 'red', label = 'Predicted BTC Value')
 plt.title('BTC Value Prediction')
 plt.xlabel('Days')
 plt.ylabel('BTC Value')
